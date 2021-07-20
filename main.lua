@@ -147,21 +147,31 @@ function Alert(data)
     SendNotification(data.style, data.duration, nil, data.message, nil, data.sound, data.custom, data.position)
 end
 
+exports('Alert', Alert)
+
 function Icon(data)
     SendNotification(data.style, data.duration, nil, data.message, nil, data.sound, data.custom, data.position, data.icon)
 end
+
+exports('Icon', Icon)
 
 function Custom(data)
     SendNotification(data.style, data.duration, data.title, data.message, data.image, data.sound, data.custom, data.position)
 end
 
+exports('Custom', Custom)
+
 function Image(data)
     SendNotification(data.style, data.duration, data.title, nil, data.image, data.sound, data.custom, data.position)
 end
 
+exports('Image', Image)
+
 function Persist(data)
     SendPersistentNotification(data.step, data.id, data.options)
 end
+
+exports('Persist', Persist)
 
 --Event Handlers from Server (Objects)
 
