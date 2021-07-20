@@ -3,10 +3,8 @@ name: "Create Stable Release"
 
 on:
   push:
-    branches:
-      - master
     tags:
-      - v*
+      - OMIT
 jobs:
   create_stable_release:
     name: "Create a Stable Release"
